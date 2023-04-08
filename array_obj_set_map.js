@@ -1,11 +1,11 @@
 /* Array - Big-O Time Complexity
 
- a) Insert/Remove from end - O(1)
- b) Insert/remove from beginning - O(n)
- c) Access - O(1)
- d) Search - O(n)
- e) Push/Pop - O(1)
- f) Shift/unshift/concat/slice/splice - O(n)
+  a) Insert/Remove from end - O(1)
+  b) Insert/remove from beginning - O(n)
+  c) Access - O(1)
+  d) Search - O(n)
+  e) Push/Pop - O(1)
+  f) Shift/unshift/concat/slice/splice - O(n)
  */
 const arr = [1, 2, 3, "Vishwas"];
 
@@ -67,7 +67,7 @@ console.log('objEntries', objEntries);
 4) Sets do not maintain an insertion order
 5) Sets are iterables. They can be used with a for of loop
 
-     Set Vs Array
+    Set Vs Array
 1) Arrays can contain duplicate values whereas Sets cannot
 2) Insertion order is maintained in arrays but it is not the case with sets
 3) Searching and deleting en element in the set is faster compared to arrays
