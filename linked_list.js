@@ -1,5 +1,4 @@
-/** https://jsfiddle.net/prabhat523/28346fqd/31/
-        Linked List
+/**     Linked List
 1) A linked is a linear data structure that includes a series of connected nodes
 2) Each node consists of a data value and a pointer that points to the next node
 3) The list element can be easily inserted or removed without reallocation or reorganization of the entire structure
