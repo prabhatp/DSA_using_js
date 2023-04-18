@@ -5,8 +5,8 @@
 3) A stack of plates. The last plate placed on top of the stack is also the first plat removed from the stack
 4) Stack is an abstract data type. It is defined by its behavior rather than being a mathematical model
 5) The stack data structure supports two main operations
-     a) Push, which adds an element to the collection
-     b) Pop, which removed the most recently added element from the collection
+    a) Push, which adds an element to the collection
+    b) Pop, which removed the most recently added element from the collection  
     
 6) Stack Usage: Browser history tracking, Undo operation when typing, Expression conversions, Call stack in Javascript runtime
 
@@ -20,33 +20,33 @@ size(): Ge thte number of elements in the stack
 print(): Visualize the elements in the stack
 */
 
-class Stack{
-	constructor() {
-     this.items = []
-  }
-  
-  push(element) {
-      this.items.push(element);
-  }
-  
-  pop() {
-     return this.items.pop();
-  }
-  
-  peek() {
-     return this.items[this.items.length -1];
-  }
-  
-  isEmpty() {
-     return this.items.length === 0;
-  }
-  
-  size() {
-     return this.items.length;
-  }
-  print() {
-      console.log(this.items.toString());
-  }
+class Stack {
+    constructor() {
+        this.items = []
+    }
+
+    push(element) {
+        this.items.push(element);
+    }
+
+    pop() {
+        return this.items.pop();
+    }
+
+    peek() {
+        return this.items[this.items.length - 1];
+    }
+
+    isEmpty() {
+        return this.items.length === 0;
+    }
+
+    size() {
+        return this.items.length;
+    }
+    print() {
+        console.log(this.items.toString());
+    }
 }
 
 const stack = new Stack();
