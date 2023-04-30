@@ -77,6 +77,82 @@ class LinkedList {
             console.log(listValue);
         }
     }
+
+    // For index not found,
+    // For index 0
+    // For index in between the list
+    removeFrom(index) {
+        if(index < 0 || index > this.size) {
+            return null;
+        }
+        let removeNode;
+        if (index === 0) {
+            removeNode = this.head;
+            this.head = this.head.next;
+        } else {
+            let prev = this.head;
+            for(let i = 0; i < index-1; i++) {
+                prev = prev.next;
+            }
+            removeNode = prev.next;
+            prev.next = removeNode.next;
+        }
+        this.size--;
+        return removeNode.value;
+    }
+
+    removeValue(value) {
+        if (this.isEmpty()) {
+            return null;
+        }
+
+        if (this.head.value === value) {
+            this.head = this.head.next;
+            this.size--;
+            return value;
+        } else {
+            let prev = this.head;
+            while(prev.next && prev.next.value !== value) {
+                prev = prev.next;
+            }
+
+            if (prev.next) {
+                const removeNode = prev.next;
+                prev.next = removeNode.next;
+                this.size--;
+                return value;
+            }
+            return null;
+        }
+    }
+
+    search(value) {
+        if (this.isEmpty()) {
+            return -1;
+        } 
+        let i = 0;
+        let curr = this.head;
+        while(curr) {
+            if (curr.value === value) {
+                return i;
+            } 
+            curr = curr.next;
+            i++;
+        }
+        return -1;
+    }
+
+    reverse() {
+        let prev = null;
+        let curr = this.head;
+        while(curr) {
+            let next = curr.next;
+            curr.next = prev;
+            prev = curr; 
+            curr = next;
+        }
+        this.head = prev;
+    }
 }
 
 const list = new LinkedList();
@@ -94,5 +170,19 @@ list.print();
 
 list.append(20);
 list.append(30);
+list.append(40);
 
+list.print();
+
+// console.log(list.removeFrom(10));
+// console.log(list.removeFrom(0));
+// list.print();
+
+// console.log(list.removeFrom(2));
+// console.log(list.removeValue(40));
+// list.print();
+
+// console.log(list.search(20));
+
+list.reverse();
 list.print();
